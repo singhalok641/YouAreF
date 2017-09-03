@@ -49,7 +49,7 @@ export default class HomeScreen extends React.Component {
               onPress={this._handleHelpPress}
               style={styles.helpLink}>
               <Text style={styles.helpLinkText}>
-                Help, it didn’t automatically reload!
+                Help, it didn’t automatically reloadj!
               </Text>
             </TouchableOpacity>
           </View>
