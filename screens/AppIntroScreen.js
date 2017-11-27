@@ -37,8 +37,8 @@ export default class AppIntroScreen extends Component {
         onSkipBtnClick={() => navigate('Login')}
         onSlideChange={this.onSlideChangeHandle}
         activeDotColor={'#000'}
-        rightTextColor={'#666666'}
-        leftTextColor={'#666666'}
+        rightTextColor={'#000'}
+        leftTextColor={'#000'}
       >
       <View style={[styles.slide, { backgroundColor: '#fad30a' }]}>
         <View style={[styles.header, {width: windowsWidth}]}>

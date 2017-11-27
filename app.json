@@ -14,7 +14,7 @@
       "color": "#000000"
     },
     "loading": {
-      "icon": "./assets/images/YOUAREF.png",
+      "icon": "./assets/icons/icon.png",
       "hideExponentText": false
     },
     "packagerOpts": {
