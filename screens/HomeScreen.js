@@ -60,13 +60,13 @@ export default class HomeScreen extends React.Component {
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
     
-    fetch('http://byld.tech/home',{
+    fetch('http://api.youaref.biz/home',{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())
@@ -84,13 +84,13 @@ export default class HomeScreen extends React.Component {
         console.error(error);
       });
 
-    fetch('http://byld.tech/myplans',{
+    fetch('http://api.youaref.biz/myplans',{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())

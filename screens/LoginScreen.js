@@ -99,7 +99,7 @@ export default class LoginScreen extends React.Component {
       
       this.openProgress();
 
-    	fetch('http://byld.tech/login', {
+    	fetch('http://api.youaref.biz/login', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

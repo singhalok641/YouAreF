@@ -44,7 +44,7 @@ export default class SignUpScreen extends Component {
     this.setState({ name: event.target.value });
   };
   
-  fetch('http://byld.tech/signup', {
+  fetch('http://api.youaref.biz/signup', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

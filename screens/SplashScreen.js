@@ -91,13 +91,13 @@ export default class SplashScreen extends Component {
       let token = await AsyncStorage.getItem('token');
       console.log(token);
       if(token!== null) {
-      fetch('http://byld.tech/checkstatus',{
+      fetch('http://api.youaref.biz/checkstatus',{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())

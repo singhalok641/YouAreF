@@ -31,13 +31,13 @@ export default class AllPlansScreen extends Component {
 
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
-    fetch('http://byld.tech/plans',{
+    fetch('http://api.youaref.biz/plans',{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())
@@ -59,13 +59,13 @@ export default class AllPlansScreen extends Component {
   
   let token = await AsyncStorage.getItem('token');
     
-  fetch(`http://byld.tech/likePlan/${id}`, {
+  fetch(`http://api.youaref.biz/likePlan/${id}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
-      'Host': 'byld.tech'
+      'Host': 'api.youaref.biz'
     }
 
   })

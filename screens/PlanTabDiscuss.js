@@ -37,14 +37,14 @@ export default class PlanTabDiscuss extends Component {
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
     
-    fetch(`http://byld.tech/plan/${this.sampleProps.sampleProps}`,
+    fetch(`http://api.youaref.biz/plan/${this.sampleProps.sampleProps}`,
     {
        method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())
@@ -64,13 +64,13 @@ export default class PlanTabDiscuss extends Component {
 
   onButtonPress= async () => {
   let token = await AsyncStorage.getItem('token');   
-  fetch(`http://byld.tech/discussPlanQuestion/${this.sampleProps.sampleProps}`, {
+  fetch(`http://api.youaref.biz/discussPlanQuestion/${this.sampleProps.sampleProps}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
-      'Host': 'byld.tech'
+      'Host': 'api.youaref.biz'
     },
     body: JSON.stringify({
       question: this.state.question,

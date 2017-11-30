@@ -71,7 +71,7 @@ export default class AppIntroScreen extends Component {
         </View>
         <View style={styles.info}>
           <View level={10}><Text style={styles.title}>Walk and talk for ₹100</Text></View>
-          <View level={10}><Text style={styles.title}>and more and more</Text></View>
+          <View level={10}><Text style={styles.title}>and more</Text></View>
           <View level={15}><Text style={styles.description}>Top employers are</Text></View>
           <View level={15}><Text style={styles.description}>searching for you.</Text></View>
         </View>

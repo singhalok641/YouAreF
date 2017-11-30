@@ -33,13 +33,13 @@ export default class CampaignsScreen extends Component {
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
     
-    fetch('http://byld.tech/companies',{
+    fetch('http://api.youaref.biz/companies',{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())

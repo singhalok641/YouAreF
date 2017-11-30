@@ -12,13 +12,13 @@ export default class PlanTabTraining extends Component {
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
     
-    fetch(`http://byld.tech/plan/${this.sampleProps.sampleProps}`,{
+    fetch(`http://api.youaref.biz/plan/${this.sampleProps.sampleProps}`,{
        method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())

@@ -21,13 +21,13 @@ export default class ProfileScreen extends Component {
   componentDidMount = async () => {
    let token = await AsyncStorage.getItem('token');
    console.log('User ');
-   fetch('http://byld.tech/user',{
+   fetch('http://api.youaref.biz/user',{
         method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())

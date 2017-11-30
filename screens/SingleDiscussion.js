@@ -35,14 +35,14 @@ export default class SingleDiscussion extends Component {
     let token = await AsyncStorage.getItem('token');
     console.log("1123");
     console.log(this.props.navigation.state.params.id);
-    fetch(`http://byld.tech/discussionAnswer/${this.props.navigation.state.params.id}`,
+    fetch(`http://api.youaref.biz/discussionAnswer/${this.props.navigation.state.params.id}`,
     {
        method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())
@@ -65,13 +65,13 @@ export default class SingleDiscussion extends Component {
     console.log(this.props.navigation.state.params.id);
     console.log(this.state.comment);
   let token = await AsyncStorage.getItem('token');   
-  fetch(`http://byld.tech/discussPlanAnswer/${this.props.navigation.state.params.id}`, {
+  fetch(`http://api.youaref.biz/discussPlanAnswer/${this.props.navigation.state.params.id}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
-      'Host': 'byld.tech'
+      'Host': 'api.youaref.biz'
     },
     body: JSON.stringify({
       answer: this.state.comment,

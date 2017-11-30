@@ -31,13 +31,13 @@ export default class PlansScreen extends Component {
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
     
-    fetch(`http://byld.tech/plan/${this.props.navigation.state.params.id}`,{
+    fetch(`http://api.youaref.biz/plan/${this.props.navigation.state.params.id}`,{
        method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())
@@ -60,13 +60,13 @@ export default class PlansScreen extends Component {
     //console.log('Abc'+this.state.res.id);
     //console.log(this.state.res.company_id);
     
-  fetch(`http://byld.tech/registerPlan/${this.state.res.id}/${this.state.res.company_id}`, {
+  fetch(`http://api.youaref.biz/registerPlan/${this.state.res.id}/${this.state.res.company_id}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
-      'Host': 'byld.tech'
+      'Host': 'api.youaref.biz'
     },
 
   })

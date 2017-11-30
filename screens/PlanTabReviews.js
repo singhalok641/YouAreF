@@ -30,13 +30,13 @@ export default class PlanTabReviews extends Component {
 
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
-    fetch(`http://byld.tech/plan/${this.sampleProps.sampleProps}`,{
+    fetch(`http://api.youaref.biz/plan/${this.sampleProps.sampleProps}`,{
        method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
       })
       .then((response) => response.json())
@@ -54,13 +54,13 @@ export default class PlanTabReviews extends Component {
 
   onButtonPress= async () => {
   let token = await AsyncStorage.getItem('token');
-  fetch(`http://byld.tech/reviewPlan/${this.sampleProps.sampleProps}`, {
+  fetch(`http://api.youaref.biz/reviewPlan/${this.sampleProps.sampleProps}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
-      'Host': 'byld.tech'
+      'Host': 'api.youaref.biz'
     },
     body: JSON.stringify({
       title: this.state.title,

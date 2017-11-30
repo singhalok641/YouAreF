@@ -35,14 +35,14 @@ constructor(props) {
 
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
-    fetch(`http://byld.tech/company/${this.props.navigation.state.params.id}`,
+    fetch(`http://api.youaref.biz/company/${this.props.navigation.state.params.id}`,
     {
       method: 'GET',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + token,
-          'Host': 'byld.tech'
+          'Host': 'api.youaref.biz'
         }
     })
       .then((response) => response.json())
@@ -70,13 +70,13 @@ constructor(props) {
   onsubmitrating = async () => {
   let token = await AsyncStorage.getItem('token');
     
-    fetch(`http://byld.tech/ratecompany/${this.props.navigation.state.params.id}`, {
+    fetch(`http://api.youaref.biz/ratecompany/${this.props.navigation.state.params.id}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
-      'Host': 'byld.tech'
+      'Host': 'api.youaref.biz'
     },
     body: JSON.stringify({
       rating: this.state.starCount,
@@ -103,13 +103,13 @@ constructor(props) {
   
   let token = await AsyncStorage.getItem('token');
     
-  fetch(`http://byld.tech/likePlan/${id}`, {
+  fetch(`http://api.youaref.biz/likePlan/${id}`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + token,
-      'Host': 'byld.tech'
+      'Host': 'api.youaref.biz'
     }
 
   })
