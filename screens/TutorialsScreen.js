@@ -18,7 +18,11 @@ export default class TutorialsScreen extends Component {
       <Container style={styles.container} >
         <Content>
 
-        <List>
+        <View style={{flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+          <Text note style={{fontSize: 20}}> No tutorials added ! </Text>
+        </View>
+
+        {/*<List>
             <ListItem>
               <Body>
                 <Text style={styles.questionStyle} > How to start ?</Text>
@@ -52,7 +56,7 @@ export default class TutorialsScreen extends Component {
                 </View>
               </Body>  
             </ListItem>
-          </List>
+          </List>*/}
 
         </Content>
       </Container>

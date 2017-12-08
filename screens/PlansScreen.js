@@ -123,17 +123,17 @@ export default class PlansScreen extends Component {
 
     return (
       <Container style={styles.container} >
-        <Tabs renderTabBar={()=> <ScrollableTab />} backgroundColor={'#fad30a'}>
+        <Tabs  backgroundColor={'#fad30a'}>
           <Tab heading="About" tabStyle={{backgroundColor: '#fad30a'}} textStyle={{color: '#000000'}} activeTabStyle={{backgroundColor: '#fad30a'}} activeTextStyle={{color: '#000000', fontWeight: 'bold'}}>
             <PlanTabAbout  
               sampleProps={this.props.navigation.state.params.id}
             />
           </Tab>
-          <Tab heading="Training" tabStyle={{backgroundColor: '#fad30a'}} textStyle={{color: '#000000'}} activeTabStyle={{backgroundColor: '#fad30a'}} activeTextStyle={{color: '#000000', fontWeight: 'bold'}}>
+          {/*<Tab heading="Training" tabStyle={{backgroundColor: '#fad30a'}} textStyle={{color: '#000000'}} activeTabStyle={{backgroundColor: '#fad30a'}} activeTextStyle={{color: '#000000', fontWeight: 'bold'}}>
             <PlanTabTraining 
               sampleProps={this.props.navigation.state.params.id}
               />
-          </Tab>
+          </Tab>*/}
           <Tab heading="Reviews" tabStyle={{backgroundColor: '#fad30a'}} textStyle={{color: '#000000'}} activeTabStyle={{backgroundColor: '#fad30a'}} activeTextStyle={{color: '#000000', fontWeight: 'bold'}}>
             <PlanTabReviews 
               sampleProps={this.props.navigation.state.params.id}
