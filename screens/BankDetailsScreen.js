@@ -7,7 +7,6 @@ export default class BankDetailsScreen extends Component {
   
   static navigationOptions = {
     title: 'Bank Details',
-    headerLeft: null,
   }
 
   constructor(props) {
