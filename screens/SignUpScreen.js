@@ -174,19 +174,20 @@ export default class SignUpScreen extends Component {
             />
             <TextInput
               style={{height: 50}}
-              placeholder="Degree"
+              placeholder="What do you do?"
               onChangeText={(degree) => this.setState({degree})}
               value={this.state.degree}
             />
             <TextInput
               style={{height: 50}}
-              placeholder="College"
+              keyboardType = 'numeric'
+              placeholder="How many friends do you have on social media?"
               onChangeText={(college) => this.setState({college})}
               value={this.state.college}
             />
             <TextInput
               style={{height: 50}}
-              placeholder="Link to CV"
+              placeholder="Why do you want to work with YouAreF?"
               onChangeText={(cv) => this.setState({cv})}
               value={this.state.cv}
             />

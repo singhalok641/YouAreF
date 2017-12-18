@@ -8,8 +8,6 @@ export default class FaqScreen extends Component {
     title: 'FAQs',
   };
 
-  
-
   render() {
     
     const { navigate } = this.props.navigation;
