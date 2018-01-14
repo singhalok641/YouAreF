@@ -173,13 +173,15 @@ export default class SignUpScreen extends Component {
               value={this.state.address}
             />
             <TextInput
-              style={{height: 50}}
-              placeholder="What do you do?"
+              style={{height: 80}}
+              multiline={true}
+              placeholder="Tell us about yourself in 100 words or more."
               onChangeText={(degree) => this.setState({degree})}
               value={this.state.degree}
             />
             <TextInput
               style={{height: 50}}
+              multiline={true}
               keyboardType = 'numeric'
               placeholder="How many friends do you have on social media?"
               onChangeText={(college) => this.setState({college})}

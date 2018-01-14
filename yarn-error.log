@@ -1,17 +1,17 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js
+  /Users/ayush/.nvm/versions/node/v4.6.1/bin/node /Users/ayush/.nvm/versions/node/v4.6.1/bin/yarn
 
 PATH: 
-  /home/mehta/bin:/home/mehta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+  /Users/ayush/.nvm/versions/node/v4.6.1/bin:/usr/local/bin:/usr/local/opt/qt/bin:/opt/local/bin:/opt/local/sbin:/Users/ayush/.jenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS
 
 Yarn version: 
   1.3.2
 
 Node version: 
-  8.9.4
+  4.6.1
 
 Platform: 
-  linux x64
+  darwin x64
 
 npm manifest: 
   {
@@ -491,9 +491,9 @@ Lockfile:
     dependencies:
       babel-runtime "^6.22.0"
   
-  babel-plugin-flow-react-proptypes@^5.1.1:
-    version "5.2.0"
-    resolved "https://registry.yarnpkg.com/babel-plugin-flow-react-proptypes/-/babel-plugin-flow-react-proptypes-5.2.0.tgz#4fa0a09b53770b5a4f8e617d70ed949fef93bb44"
+  babel-plugin-flow-react-proptypes@^9.1.1:
+    version "9.2.0"
+    resolved "https://registry.yarnpkg.com/babel-plugin-flow-react-proptypes/-/babel-plugin-flow-react-proptypes-9.2.0.tgz#d32594b5c85ea90cb625e10f9954d114526ddeae"
     dependencies:
       babel-core "^6.25.0"
       babel-template "^6.25.0"
@@ -3323,24 +3323,24 @@ Lockfile:
     version "2.8.0"
     resolved "https://registry.yarnpkg.com/nan/-/nan-2.8.0.tgz#ed715f3fe9de02b57a5e6252d90a96675e1f085a"
   
-  native-base-shoutem-theme@0.2.1:
-    version "0.2.1"
-    resolved "https://registry.yarnpkg.com/native-base-shoutem-theme/-/native-base-shoutem-theme-0.2.1.tgz#8494783833dcc5bace945db68dc7bfce209fcc40"
+  native-base-shoutem-theme@0.2.2:
+    version "0.2.2"
+    resolved "https://registry.yarnpkg.com/native-base-shoutem-theme/-/native-base-shoutem-theme-0.2.2.tgz#5823310455fe391adf72236469c039fd44f56a20"
     dependencies:
       hoist-non-react-statics "^1.0.5"
       lodash "^4.10.1"
       prop-types "^15.5.10"
   
-  native-base@^2.3.1:
-    version "2.3.3"
-    resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.3.3.tgz#de35234cf9cf8d24b5ce5e1720f8330dd5f3c96a"
+  native-base@^2.3.6:
+    version "2.3.6"
+    resolved "https://registry.yarnpkg.com/native-base/-/native-base-2.3.6.tgz#3e81d0a7c2d65e535ad68ee6299069beff0a1366"
     dependencies:
       blueimp-md5 "^2.5.0"
       clamp "^1.0.1"
       color "~1.0.3"
       fs-extra "^2.0.0"
       lodash "~4.11.1"
-      native-base-shoutem-theme "0.2.1"
+      native-base-shoutem-theme "0.2.2"
       print-message "^2.1.0"
       prop-types "^15.5.10"
       react-native-drawer "https://github.com/GeekyAnts/react-native-drawer"
@@ -3893,9 +3893,9 @@ Lockfile:
     dependencies:
       react-native-dismiss-keyboard "1.0.0"
   
-  "react-native-drawer@https://github.com/GeekyAnts/react-native-drawer":
+  "react-native-drawer@git+https://github.com/GeekyAnts/react-native-drawer.git":
     version "2.3.0"
-    resolved "https://github.com/GeekyAnts/react-native-drawer#8d9078516d177c9cb02d2579a6860706d2370d25"
+    resolved "git+https://github.com/GeekyAnts/react-native-drawer.git#8d9078516d177c9cb02d2579a6860706d2370d25"
     dependencies:
       prop-types "^15.5.8"
       tween-functions "^1.0.1"
@@ -3921,9 +3921,9 @@ Lockfile:
     dependencies:
       prop-types "^15.5.10"
   
-  react-native-hyperlink@0.0.11:
-    version "0.0.11"
-    resolved "https://registry.yarnpkg.com/react-native-hyperlink/-/react-native-hyperlink-0.0.11.tgz#26e2b37d48759545289ad9c8cbec7cf46f1ef482"
+  react-native-hyperlink@0.0.12:
+    version "0.0.12"
+    resolved "https://registry.yarnpkg.com/react-native-hyperlink/-/react-native-hyperlink-0.0.12.tgz#07fcd81bdc23da35dafde0546073347398adcaff"
     dependencies:
       linkify-it "^1.2.0"
   
@@ -3931,9 +3931,9 @@ Lockfile:
     version "1.1.3"
     resolved "https://registry.yarnpkg.com/react-native-icon-badge/-/react-native-icon-badge-1.1.3.tgz#43de0c923afe4968dfcff127ec5c57057b16f787"
   
-  "react-native-keyboard-aware-scroll-view@https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view":
+  "react-native-keyboard-aware-scroll-view@git+https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view.git":
     version "0.2.9"
-    resolved "https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view#f4805f254d6cc8e3329f5fb224944401f66655db"
+    resolved "git+https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view.git#f4805f254d6cc8e3329f5fb224944401f66655db"
     dependencies:
       create-react-class "^15.6.0"
       prop-types "^15.5.10"
@@ -3943,16 +3943,16 @@ Lockfile:
     version "0.15.3"
     resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.15.3.tgz#5d9e0a8e30ecc51dc755b7a3b9d6b6ed5e2dd08c"
   
-  react-native-phone-call@^1.0.3:
+  react-native-phone-call@^1.0.4:
     version "1.0.4"
     resolved "https://registry.yarnpkg.com/react-native-phone-call/-/react-native-phone-call-1.0.4.tgz#809b7dd27452e429c9deddb4c311997702e333ba"
   
-  react-native-popup-dialog@^0.9.36:
-    version "0.9.39"
-    resolved "https://registry.yarnpkg.com/react-native-popup-dialog/-/react-native-popup-dialog-0.9.39.tgz#3d869d0e8e711ce37dc5f5e0581e62d8f21c331b"
+  react-native-popup-dialog@^0.10.46:
+    version "0.10.46"
+    resolved "https://registry.yarnpkg.com/react-native-popup-dialog/-/react-native-popup-dialog-0.10.46.tgz#32461959b4423e585edbf83dd271ff75da5e9a03"
     dependencies:
-      babel-plugin-flow-react-proptypes "^5.1.1"
-      prop-types "^15.5.8"
+      babel-plugin-flow-react-proptypes "^9.1.1"
+      prop-types "^15.6.0"
   
   react-native-safe-module@^1.1.0:
     version "1.2.0"
@@ -3960,13 +3960,13 @@ Lockfile:
     dependencies:
       dedent "^0.6.0"
   
-  react-native-simple-dialogs@^0.2.5:
-    version "0.2.5"
-    resolved "https://registry.yarnpkg.com/react-native-simple-dialogs/-/react-native-simple-dialogs-0.2.5.tgz#fa570c1e26b20da08e50b10859321da3d2535d0e"
+  react-native-simple-dialogs@^0.3.1:
+    version "0.3.1"
+    resolved "https://registry.yarnpkg.com/react-native-simple-dialogs/-/react-native-simple-dialogs-0.3.1.tgz#8b7cee294c6c2b140f3fd3c75f87b178e229936e"
   
-  react-native-simple-radio-button@^2.7.0:
-    version "2.7.0"
-    resolved "https://registry.yarnpkg.com/react-native-simple-radio-button/-/react-native-simple-radio-button-2.7.0.tgz#0ad7e9beda7650519ca7ae479ee94cf7facd7d4e"
+  react-native-simple-radio-button@^2.7.1:
+    version "2.7.1"
+    resolved "https://registry.yarnpkg.com/react-native-simple-radio-button/-/react-native-simple-radio-button-2.7.1.tgz#4a4a5cae903b6bc680c5e4bd5931948aa7608da0"
   
   react-native-star-rating@^1.0.8:
     version "1.0.8"
@@ -3990,11 +3990,11 @@ Lockfile:
     dependencies:
       react-timer-mixin "^0.13.3"
   
-  react-native-tab-view@^0.0.70:
-    version "0.0.70"
-    resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.70.tgz#1dd2ded32acd0cb6bfef38d26e53675db733b37b"
+  react-native-tab-view@^0.0.74:
+    version "0.0.74"
+    resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.74.tgz#62c0c882d9232b461ce181d440d683b4f99d1bd8"
     dependencies:
-      prop-types "^15.5.10"
+      prop-types "^15.6.0"
   
   react-native-vector-icons@4.1.1:
     version "4.1.1"
@@ -4100,9 +4100,9 @@ Lockfile:
       xtend ">=4.0.0 <4.1.0-0"
       yargs "^6.4.0"
   
-  react-navigation@1.0.0-beta.18:
-    version "1.0.0-beta.18"
-    resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-1.0.0-beta.18.tgz#ecaa8372f4dfd57eae121ba48ca4758f2b5f30ef"
+  react-navigation@1.0.0-beta.26:
+    version "1.0.0-beta.26"
+    resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-1.0.0-beta.26.tgz#186fcd1ec13828c7c133ca560b5d95a55e2b9f66"
     dependencies:
       babel-plugin-transform-define "^1.3.0"
       clamp "^1.0.1"
@@ -4110,7 +4110,7 @@ Lockfile:
       path-to-regexp "^1.7.0"
       prop-types "^15.5.10"
       react-native-drawer-layout-polyfill "^1.3.2"
-      react-native-tab-view "^0.0.70"
+      react-native-tab-view "^0.0.74"
   
   react-proxy@^1.1.7:
     version "1.1.8"
@@ -5253,4 +5253,5 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/mehta/Projects/YouAreF/node_modules/expo/node_modules/yargs/CHANGELOG.md'
+  Error: https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz: EISDIR: illegal operation on a directory, open '/Users/ayush/Library/Caches/Yarn/v1/npm-react-native-0.48.4-a26ae48f77a0ac91acd19b1bb60d63737075f3ef/'
+      at Error (native)
