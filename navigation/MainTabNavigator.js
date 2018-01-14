@@ -34,8 +34,8 @@ export default TabNavigator(
         switch (routeName) {
           case 'Campaigns':
             iconName = Platform.OS === 'ios'
-              ? `ios-search${focused ? '' : '-outline'}`
-              : 'md-search';
+              ? `ios-globe${focused ? '' : '-outline'}`
+              : 'md-globe';
               break;
           case 'Home':
             iconName = Platform.OS === 'ios'
@@ -44,8 +44,8 @@ export default TabNavigator(
             break;    
           case 'AllPlans':
             iconName = Platform.OS === 'ios'
-              ? `ios-chatboxes${focused ? '' : '-outline'}`
-              : 'md-chatboxes';
+              ? `ios-bicycle${focused ? '' : '-outline'}`
+              : 'md-bicycle';
             break;
           case 'Menu':
             iconName = Platform.OS === 'ios'
