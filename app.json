@@ -23,7 +23,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.youaref.client",
-      "buildNumber": "1.0.4",
+      "buildNumber": "1.0.6",
       "config":{
         "googleSignIn":{
           "reservedClientId":"com.googleusercontent.apps.612669964630-79dju4toak9f4svrbp8n8f0ns27o1ldq"
@@ -32,7 +32,7 @@
     },
     "android": {
       "package": "com.youaref.client",
-      "versionCode": 5,
+      "versionCode": 6,
       "config": {
         "googleSignIn": {
           "apiKey": "AIzaSyBHzyuKFyzQPdVsg126zD4u_x4lIHIe34o",
