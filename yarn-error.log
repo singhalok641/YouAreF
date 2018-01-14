@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add @expo/vector-icons
+  /usr/bin/node /usr/share/yarn/bin/yarn.js
 
 PATH: 
   /home/mehta/bin:/home/mehta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
@@ -29,23 +29,24 @@ npm manifest:
     },
     "dependencies": {
       "@expo/react-native-read-more-text": "^1.1.0",
+      "@expo/vector-icons": "^6.2.2",
       "expo": "^21.0.0",
       "moment": "^2.18.1",
-      "native-base": "^2.3.1",
+      "native-base": "^2.3.6",
       "prop-types": "^15.6.0",
       "react": "16.0.0-alpha.12",
       "react-native": "https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz",
       "react-native-action-button": "^2.8.0",
       "react-native-app-intro": "^1.1.5",
       "react-native-elements": "^0.19.0",
-      "react-native-hyperlink": "0.0.11",
+      "react-native-hyperlink": "0.0.12",
       "react-native-icon-badge": "^1.1.3",
-      "react-native-phone-call": "^1.0.3",
-      "react-native-popup-dialog": "^0.9.36",
-      "react-native-simple-dialogs": "^0.2.5",
-      "react-native-simple-radio-button": "^2.7.0",
+      "react-native-phone-call": "^1.0.4",
+      "react-native-popup-dialog": "^0.10.46",
+      "react-native-simple-dialogs": "^0.3.1",
+      "react-native-simple-radio-button": "^2.7.1",
       "react-native-star-rating": "^1.0.8",
-      "react-navigation": "1.0.0-beta.18"
+      "react-navigation": "1.0.0-beta.26"
     },
     "devDependencies": {
       "jest-expo": "^21.0.0"
@@ -70,6 +71,13 @@ Lockfile:
     dependencies:
       lodash "^4.17.4"
       react-native-vector-icons "4.1.1"
+  
+  "@expo/vector-icons@^6.2.2":
+    version "6.2.2"
+    resolved "https://registry.yarnpkg.com/@expo/vector-icons/-/vector-icons-6.2.2.tgz#441edb58a52c0f4e5b4aba1e6f8da1e87cea7e11"
+    dependencies:
+      lodash "^4.17.4"
+      react-native-vector-icons "4.4.2"
   
   abab@^1.0.3:
     version "1.0.4"
@@ -3996,7 +4004,7 @@ Lockfile:
       prop-types "^15.5.8"
       yargs "^6.3.0"
   
-  react-native-vector-icons@^4.2.0, react-native-vector-icons@~4.4.2:
+  react-native-vector-icons@4.4.2, react-native-vector-icons@^4.2.0, react-native-vector-icons@~4.4.2:
     version "4.4.2"
     resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.4.2.tgz#090f42ee0396c4cc4eae0ddaa518028ba8df40c7"
     dependencies:
@@ -5245,7 +5253,4 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com:443
-      at Object._errnoException (util.js:1022:11)
-      at errnoException (dns.js:55:15)
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+  Error: EACCES: permission denied, unlink '/home/mehta/Projects/YouAreF/node_modules/expo/node_modules/yargs/CHANGELOG.md'

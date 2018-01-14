@@ -16,21 +16,21 @@
     "@expo/vector-icons": "^6.2.2",
     "expo": "^21.0.0",
     "moment": "^2.18.1",
-    "native-base": "^2.3.1",
+    "native-base": "^2.3.6",
     "prop-types": "^15.6.0",
     "react": "16.0.0-alpha.12",
     "react-native": "https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz",
     "react-native-action-button": "^2.8.0",
     "react-native-app-intro": "^1.1.5",
     "react-native-elements": "^0.19.0",
-    "react-native-hyperlink": "0.0.11",
+    "react-native-hyperlink": "0.0.12",
     "react-native-icon-badge": "^1.1.3",
-    "react-native-phone-call": "^1.0.3",
-    "react-native-popup-dialog": "^0.9.36",
-    "react-native-simple-dialogs": "^0.2.5",
-    "react-native-simple-radio-button": "^2.7.0",
+    "react-native-phone-call": "^1.0.4",
+    "react-native-popup-dialog": "^0.10.46",
+    "react-native-simple-dialogs": "^0.3.1",
+    "react-native-simple-radio-button": "^2.7.1",
     "react-native-star-rating": "^1.0.8",
-    "react-navigation": "1.0.0-beta.18"
+    "react-navigation": "1.0.0-beta.26"
   },
   "devDependencies": {
     "jest-expo": "^21.0.0"
