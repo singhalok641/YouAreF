@@ -7,7 +7,7 @@ export default class CampaignsScreen extends Component {
   static navigationOptions = {
     title: 'Brands',
     headerLeft: null,
-    headerTitleStyle: { alignSelf: 'center' },
+    headerStyle: {height: 40}
   }
 
   constructor(props) {

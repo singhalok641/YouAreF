@@ -8,6 +8,7 @@ export default class ProfileScreen extends Component {
   
   static navigationOptions = {
     title: 'Profile',
+    headerStyle: {height: 40}
   }
 
   constructor(props) {

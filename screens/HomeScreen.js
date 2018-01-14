@@ -188,7 +188,7 @@ export default class HomeScreen extends React.Component {
                 <List dataArray={this.state.myplans}
                 renderRow={(myplans) =>
                   <ListItem onPress={() => navigate('PlansScreen', { id: `${myplans.plan_id}`, name: `${myplans.name}`})}>
-                    <Image style={styles.thumbnailStyle} source={{ uri: 'http://media.corporate-ir.net/media_files/IROL/17/176060/img/logos/amazon_logo_RGB.jpg' }} />
+                    <Image style={styles.thumbnailStyle} source={{ uri: myplans.logo }} />
                     <Body>
                       <View style={styles.viewTextStyle}>
                         <Text>{myplans.name}</Text>
@@ -227,7 +227,7 @@ export default class HomeScreen extends React.Component {
             <ActionButton.Item buttonColor='#9b59b6' title="Call" onPress={() => call(args).catch(console.error)}>
               <Ionicons name="md-call" style={styles.actionButtonIcon} />
             </ActionButton.Item>
-            <ActionButton.Item buttonColor='#1abc9c' title="Chat" onPress={() => Linking.openURL('whatsapp://send?text=hello&phone=+918377815867') }>
+            <ActionButton.Item buttonColor='#1abc9c' title="Chat" onPress={() => Linking.openURL('whatsapp://send?text=hello&phone=+917888000008') }>
               <Ionicons name="md-chatboxes" style={styles.actionButtonIcon} />
             </ActionButton.Item>
           </ActionButton>
@@ -239,7 +239,6 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ffffff',
-    paddingTop: 20
   },
   headerText :{
     alignItems: 'center',

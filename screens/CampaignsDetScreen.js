@@ -187,7 +187,7 @@ constructor(props) {
                 </View>
                 <View style={styles.viewTextStyle}>
                   <Text note >{plan.difficulty}</Text>
-                  <View style={{ left:90 }}>
+                  <View style={{ left:140 }}>
                   <TouchableOpacity onPress={() => this.onButtonPress(plan.id)}>
                     <EvilIcons name="like" size={30} color="#000000" />
                   </TouchableOpacity>

@@ -6,6 +6,7 @@ export default class FaqScreen extends Component {
   
   static navigationOptions = {
     title: 'FAQs',
+    headerStyle: {height: 40}
   };
 
   render() {

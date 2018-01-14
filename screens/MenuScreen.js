@@ -6,6 +6,7 @@ export default class MenuScreen extends React.Component {
   static navigationOptions = {
     title: 'Menu',
     headerLeft: null,
+    headerStyle: {height: 40}
     
   }
 

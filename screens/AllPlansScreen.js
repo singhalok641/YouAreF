@@ -8,6 +8,7 @@ export default class AllPlansScreen extends Component {
   static navigationOptions = {
     title: 'Missions',
     headerLeft: null,
+    headerStyle: {height: 40}
   }
 
    constructor(props) {
@@ -119,7 +120,7 @@ export default class AllPlansScreen extends Component {
                 </View>
                 <View style={styles.viewTextStyle}>
                   <Text note >{plan.difficulty}</Text>
-                  <View style={{ left:90 }}>
+                  <View style={{ left:108 }}>
                   <TouchableOpacity onPress={() => this.onButtonPress(plan.id)}>
                     <EvilIcons name="like" size={30} color="#000000" />
                   </TouchableOpacity>

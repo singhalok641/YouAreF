@@ -8,6 +8,7 @@ export default class TutorialsScreen extends Component {
   
   static navigationOptions = {
     title: 'Tutorials',
+    headerStyle: {height: 40}
   };
 
   render() {

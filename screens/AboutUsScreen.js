@@ -10,6 +10,7 @@ export default class AboutUsScreen extends Component {
   
   static navigationOptions = {
     title: 'About Us',
+    headerStyle: {height: 40}
   };
 
   _renderTruncatedFooter = handlePress => {

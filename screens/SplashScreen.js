@@ -134,11 +134,11 @@ export default class SplashScreen extends Component {
     const { navigate } = this.props.navigation;
     return (
       <ProgressDialog
-              visible={this.state.showProgress}
+              visible={true}
               message="Loading..."
               activityIndicatorSize="large"
               activityIndicatorColor="black"
-            />
+      />
     );
   }
 }

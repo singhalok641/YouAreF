@@ -7,6 +7,7 @@ export default class BankDetailsScreen extends Component {
   
   static navigationOptions = {
     title: 'Bank Details',
+    headerStyle: {height: 40}
   }
 
   constructor(props) {
