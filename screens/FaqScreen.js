@@ -44,12 +44,6 @@ export default class FaqScreen extends Component {
             </ListItem>
             <ListItem>
               <Body>
-                <Text style={styles.questionStyle}>What I have to report?</Text>
-                <Text style={styles.answerStyle} >You have to report the summary and deliverables of the hour spent working.</Text>
-              </Body>
-            </ListItem>
-            <ListItem>
-              <Body>
                 <Text style={styles.questionStyle}>Whom I have to report or answer?</Text>
                 <Text style={styles.answerStyle} >You have to report your HR manager.</Text>
               </Body>

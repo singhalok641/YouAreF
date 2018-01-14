@@ -239,6 +239,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ffffff',
+    paddingTop:20,
   },
   headerText :{
     alignItems: 'center',
