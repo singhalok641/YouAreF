@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   View,
+  Linking,
   TouchableHighlight,
   AsyncStorage,
   ActivityIndicator } from 'react-native';
@@ -226,7 +227,7 @@ export default class HomeScreen extends React.Component {
             <ActionButton.Item buttonColor='#9b59b6' title="Call" onPress={() => call(args).catch(console.error)}>
               <Ionicons name="md-call" style={styles.actionButtonIcon} />
             </ActionButton.Item>
-            <ActionButton.Item buttonColor='#1abc9c' title="Chat" onPress={() => navigate('ChatScreen')}>
+            <ActionButton.Item buttonColor='#1abc9c' title="Chat" onPress={() => Linking.openURL('whatsapp://send?text=hello&phone=+918377815867') }>
               <Ionicons name="md-chatboxes" style={styles.actionButtonIcon} />
             </ActionButton.Item>
           </ActionButton>
