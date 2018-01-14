@@ -1,14 +1,14 @@
 Arguments: 
-  /home/anshul/.nvm/versions/node/v8.4.0/bin/node /home/anshul/.nvm/versions/node/v8.4.0/bin/yarn
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add @expo/vector-icons
 
 PATH: 
-  /home/anshul/.nvm/versions/node/v8.4.0/bin:/home/anshul/bin:/home/anshul/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/anshul/Downloads/genymotion/tools:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+  /home/mehta/bin:/home/mehta/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
 Yarn version: 
   1.3.2
 
 Node version: 
-  8.4.0
+  8.9.4
 
 Platform: 
   linux x64
@@ -32,11 +32,12 @@ npm manifest:
       "expo": "^21.0.0",
       "moment": "^2.18.1",
       "native-base": "^2.3.1",
+      "prop-types": "^15.6.0",
       "react": "16.0.0-alpha.12",
       "react-native": "https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz",
       "react-native-action-button": "^2.8.0",
       "react-native-app-intro": "^1.1.5",
-      "react-native-elements": "^0.17.0",
+      "react-native-elements": "^0.19.0",
       "react-native-hyperlink": "0.0.11",
       "react-native-icon-badge": "^1.1.3",
       "react-native-phone-call": "^1.0.3",
@@ -2255,10 +2256,6 @@ Lockfile:
     version "3.2.3"
     resolved "https://registry.yarnpkg.com/immediate/-/immediate-3.2.3.tgz#d140fa8f614659bd6541233097ddaac25cdd991c"
   
-  immutable@^3.8.1:
-    version "3.8.2"
-    resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"
-  
   imurmurhash@^0.1.4:
     version "0.1.4"
     resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
@@ -3757,7 +3754,7 @@ Lockfile:
     dependencies:
       asap "~2.0.3"
   
-  prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8:
+  prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0:
     version "15.6.0"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
     dependencies:
@@ -3901,16 +3898,14 @@ Lockfile:
     dependencies:
       lodash "^4.11.1"
   
-  react-native-elements@^0.17.0:
-    version "0.17.0"
-    resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-0.17.0.tgz#b5f3e0959b41f04f0aa6a1c1a547be22f94c8a12"
+  react-native-elements@^0.19.0:
+    version "0.19.0"
+    resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-0.19.0.tgz#737c5198bf7487f9986e2023826cd0bd7a500366"
     dependencies:
       lodash.isempty "^4.4.0"
       lodash.times "^4.3.2"
       opencollective "^1.0.3"
       prop-types "^15.5.8"
-      react-native-side-menu "^1.0.2"
-      react-native-tab-navigator "^0.3.4"
   
   react-native-gesture-handler@1.0.0-alpha.22:
     version "1.0.0-alpha.22"
@@ -3957,12 +3952,6 @@ Lockfile:
     dependencies:
       dedent "^0.6.0"
   
-  react-native-side-menu@^1.0.2:
-    version "1.1.3"
-    resolved "https://registry.yarnpkg.com/react-native-side-menu/-/react-native-side-menu-1.1.3.tgz#6ef5d2232ecf718312df6cedef019148bac3073a"
-    dependencies:
-      prop-types "^15.5.10"
-  
   react-native-simple-dialogs@^0.2.5:
     version "0.2.5"
     resolved "https://registry.yarnpkg.com/react-native-simple-dialogs/-/react-native-simple-dialogs-0.2.5.tgz#fa570c1e26b20da08e50b10859321da3d2535d0e"
@@ -3992,13 +3981,6 @@ Lockfile:
     resolved "git+https://github.com/FuYaoDe/react-native-swiper.git#a6417ff41a8b2d490bdcc4541015ab35736d4595"
     dependencies:
       react-timer-mixin "^0.13.3"
-  
-  react-native-tab-navigator@^0.3.4:
-    version "0.3.4"
-    resolved "https://registry.yarnpkg.com/react-native-tab-navigator/-/react-native-tab-navigator-0.3.4.tgz#54a18f1ad06a09d4a0de81ff00416bc1b760c960"
-    dependencies:
-      immutable "^3.8.1"
-      prop-types "^15.5.10"
   
   react-native-tab-view@^0.0.70:
     version "0.0.70"
@@ -5263,14 +5245,7 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-0.17.0.tgz: ESOCKETTIMEDOUT
-      at ClientRequest.<anonymous> (/home/anshul/.nvm/versions/node/v8.4.0/lib/node_modules/yarn/lib/cli.js:123716:19)
-      at Object.onceWrapper (events.js:314:30)
-      at emitNone (events.js:105:13)
-      at ClientRequest.emit (events.js:207:7)
-      at TLSSocket.emitTimeout (_http_client.js:722:34)
-      at Object.onceWrapper (events.js:314:30)
-      at emitNone (events.js:105:13)
-      at TLSSocket.emit (events.js:207:7)
-      at TLSSocket.Socket._onTimeout (net.js:398:8)
-      at ontimeout (timers.js:469:11)
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com:443
+      at Object._errnoException (util.js:1022:11)
+      at errnoException (dns.js:55:15)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
