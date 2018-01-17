@@ -46,46 +46,93 @@ export default class AboutUsScreen extends Component {
              source={require('../assets/images/AboutUs.png')}
             />
           </Body>
-          <View style={styles.card}>
+          
+          <View style={styles.cardLabel}>
+          <BoldText style={styles.cardLabelText}>
+            About Us
+          </BoldText>
+          </View>
+          
+        <View style={styles.card}>
           <View style={styles.cardBody}>
             <ReadMore
-              numberOfLines={15}
+              numberOfLines={3}
               renderTruncatedFooter={this._renderTruncatedFooter}
               renderRevealedFooter={this._renderRevealedFooter}>
-              <RegularText style={styles.cardText}>Simply put, we identify the customers and potential customers most 
-              likely to talk about your brand (we call these people “Influencers”) and then use creative tactics 
-              to encourage communications between Influencers and members of their social network. Bring all of 
-              this together and you have “Word of Mouth Marketing,” the most effective technique available for growing 
-              your brand and increasing your sales.{"\n"}</RegularText>
-              <RegularText style={styles.cardText}>WOMM includes tactics such as evangelist, viral, grassroots and 
-              seeding, to name a few. Although these may seem like buzzwords, each is a distinct tactic that has its 
-              proper time and place. They are often used together to create great stories about your brand that people 
-              will want to share with one another over an extended period of time.
-              All WOMM techniques are based on the concepts of customer satisfaction, two-way dialog and transparent 
-              communications. The basic elements are:{"\n"}{"\n"}
-              Identifying the people most likely to share their opinions
-              Studying how, where and when opinions are being shared
-              Providing the tools to make it easier to share information
-              Listening and responding to people that have good, bad or indifferent things to say{"\n"}{"\n"}
-              Conventional Marketing
-              {"\n"}{"\n"}  
-              Broadcast
-              Push
-              Company scheduled
-              Lag time
-              Company to audience
-              Expected
-              {"\n"}{"\n"}
-              Word of Mouth Marketing
-              {"\n"}{"\n"}
-              Narrowcast
-              Pull
-              Consumer requested
-              Real time
-              Peer to peer
-              Interesting
-              </RegularText>
+              <RegularText style={styles.cardText}>Simply Put, we at YouAreF are the game changers in the era of marketing. Our tactics is way different from traditional marketing, we identify the influencers to talk about the brands. The way we depict the story and produce content, it makes brand go viral and the role of Gabby/Artist/Influencer/Journalist/Salesman comes in. {"\n"}</RegularText>
+            </ReadMore>
+          </View>
+        </View>
 
+        <View style={styles.cardLabel}>
+          <BoldText style={styles.cardLabelText}>
+            Get paid INR 100/Hour & More
+          </BoldText>
+          </View>
+          
+        <View style={styles.card}>
+          <View style={styles.cardBody}>
+            <ReadMore
+              numberOfLines={3}
+              renderTruncatedFooter={this._renderTruncatedFooter}
+              renderRevealedFooter={this._renderRevealedFooter}>
+              <RegularText style={styles.cardText}>If you’re associated to work with us you, it includes tactics such as evangelist, viral, grassroots and seeding,
+               to name a few. Although these may seem like buzzwords, each is a distinct tactic that has its proper time and place.
+               They are often used together to create great stories about the brand that you have to share with with your social circle over an extended period of time.{"\n"}{"\n"}
+               If you’re associated with us as an Artist, your job is to help startups spread the right message with power content & artwork.{"\n"}{"\n"}
+               All word of mouth techniques are based on the concepts of customer satisfaction, two-way dialog and transparent communications. The basic elements are:{"\n"}{"\n"}
+               Identifying the people most likely to share their opinions{"\n"}
+               Studying how, where and when opinions are being shared.{"\n"}
+               Providing the tools to make it easier to share information.{"\n"}
+               Listening and responding to people that have good, bad or indifferent things to say.</RegularText>
+            </ReadMore>
+          </View>
+        </View>
+
+        <View style={styles.cardLabel}>
+          <BoldText style={styles.cardLabelText}>
+            Conventional Marketing
+          </BoldText>
+          </View>
+          
+        <View style={styles.card}>
+          <View style={styles.cardBody}>
+            <ReadMore
+              numberOfLines={3}
+              renderTruncatedFooter={this._renderTruncatedFooter}
+              renderRevealedFooter={this._renderRevealedFooter}>
+              <RegularText style={styles.cardText}>
+              Broadcast{"\n"}
+              Push{"\n"}
+              Company scheduled{"\n"}
+              Lag time{"\n"}
+              Company to audience{"\n"}
+              Expected{"\n"}
+              </RegularText>
+            </ReadMore>
+          </View>
+        </View>
+
+        <View style={styles.cardLabel}>
+          <BoldText style={styles.cardLabelText}>
+            YouAreF Marketing
+          </BoldText>
+          </View>
+          
+        <View style={styles.card}>
+          <View style={styles.cardBody}>
+            <ReadMore
+              numberOfLines={3}
+              renderTruncatedFooter={this._renderTruncatedFooter}
+              renderRevealedFooter={this._renderRevealedFooter}>
+              <RegularText style={styles.cardText}>
+              Narrowcast{"\n"}
+              Pull{"\n"}
+              Consumer requested{"\n"}
+              Real time{"\n"}
+              Peer to peer{"\n"}
+              Interesting{"\n"}
+              </RegularText>
             </ReadMore>
           </View>
         </View>
@@ -114,16 +161,25 @@ const styles = StyleSheet.create({
     marginTop:10,
   },
   card: {
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#E8E8E8',
     backgroundColor: '#fff',
   },
   cardBody: {
-    paddingVertical: 12,
-    paddingHorizontal: 10,
+    paddingTop:0,
+    paddingBottom:6,
+    paddingHorizontal: 12,
   },
   cardText: {
-    fontSize: 16,
+    fontSize: 18,
     color: '#424242',
+  },
+  cardLabel: {
+    paddingHorizontal:12,
+    paddingTop:6,
+    paddingBottom:6,
+  },
+  cardLabelText: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: '#000000',
   },
 });
