@@ -131,11 +131,8 @@ export default class HomeScreen extends React.Component {
     return (
         <Container style={styles.container}>
           <Content>
-             <Card style={{backgroundColor:"#fad30a"}}>
-                {/*<View style={ styles.notificationActionButtonView }>
-                  <Ionicons name="md-notifications" style={styles.notificationButtonIcon} />
-                </View>*/}
-                <CardItem style={{ alignItems: 'center',justifyContent: 'center',backgroundColor:'#fad30a' }}>
+             <Card style={{backgroundColor:"#fad30a",paddingTop:24}}>
+                <CardItem style={{ alignItems: 'center',justifyContent: 'center',backgroundColor:'#fad30a'}}>
                   <Text style={{ fontSize:30,color:'#000000' }}> Hello, {split[0]} !</Text>
                 </CardItem>
                 <CardItem style={{alignItems: 'center',justifyContent: 'center',paddingTop:0,backgroundColor:'#fad30a'}}>
@@ -239,7 +236,6 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ffffff',
-    paddingTop:20,
   },
   headerText :{
     alignItems: 'center',
