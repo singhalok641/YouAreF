@@ -48,7 +48,8 @@ export default class AppIntroScreen extends Component {
         </View>
         <View style={styles.info}>
           <View level={10}><Text style={styles.title}>You Are F</Text></View>
-          <View level={15}><Text style={styles.description}>Where F Stands For Found</Text></View>
+          <View level={15}><Text style={styles.description}>Don't Use Your Dirty Mind,</Text></View>
+          <View level={15}><Text style={styles.description}>F Stands For Found</Text></View>
         </View>
       </View>
       <View style={[styles.slide, { backgroundColor: '#fad30a' }]}>
@@ -58,9 +59,12 @@ export default class AppIntroScreen extends Component {
           </View>
         </View>
         <View style={styles.info}>
-          <View level={10}><Text style={styles.title}>Are You A Bakchod?</Text></View>
-          <View level={10}><Text style={styles.title}>A Gabby?</Text></View>
-          <View level={10}><Text style={styles.title}>A Social Butterfly?</Text></View>
+          <View level={10}><Text style={styles.medium}>Are You A Bakchod?</Text></View>
+          <View level={10}><Text style={styles.medium}>A Social Butterfly?</Text></View>
+          <View level={10}><Text style={styles.medium}>A Gabby?</Text></View>
+          <View level={10}><Text style={styles.medium}>A Journalist?</Text></View>
+          <View level={10}><Text style={styles.medium}>An Influencer?</Text></View>
+          <View level={10}><Text style={styles.medium}>An Artist?</Text></View>
         </View>
       </View>
       <View style={[styles.slide, { backgroundColor: '#fad30a' }]}>
@@ -70,10 +74,10 @@ export default class AppIntroScreen extends Component {
           </View>
         </View>
         <View style={styles.info}>
-          <View level={10}><Text style={styles.title}>Walk and talk for ₹100</Text></View>
-          <View level={10}><Text style={styles.title}>and more</Text></View>
+          <View level={10}><Text style={{color: '#000',fontSize:28,}}>Work, Walk and Talk </Text></View>
+          <View level={10}><Text style={{color: '#000',fontSize:28,paddingBottom:16}}>for ₹100/Hour and more</Text></View>
           <View level={15}><Text style={styles.description}>Top employers are</Text></View>
-          <View level={15}><Text style={styles.description}>searching for you.</Text></View>
+          <View level={15}><Text style={styles.description}>looking for you.</Text></View>
         </View>
       </View>
   </AppIntro>
@@ -126,7 +130,10 @@ const styles = StyleSheet.create({
   title: {
     color: '#000',
     fontSize: 30,
-    paddingBottom: 20,
+  },
+  medium: {
+    fontSize: 24,
+    fontWeight:"400"
   },
   description: {
     color: '#000',
