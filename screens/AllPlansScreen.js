@@ -113,7 +113,7 @@ export default class AllPlansScreen extends Component {
             renderRow={(plan) =>
             <ListItem onPress={() => navigate('PlansScreen', { id: `${plan.id}`, name: `${plan.name}`})}>
               <Image style={styles.thumbnailStyle} source={{ uri: plan.logo }} />
-              <Body>
+              {/*<Body>
                 <View style={styles.viewTextStyle}>
                   <Text>{plan.name}</Text>
                   <Text note>Rs {plan.price_of_product}</Text>
@@ -131,7 +131,34 @@ export default class AllPlansScreen extends Component {
                     </Text>
                   </View>
                 </View>
-              </Body>
+              </Body>*/}
+              <View style={styles.view}>
+                  <View style={styles.leftinnerview}>
+                      <View style={styles.leftmostinnerview}>
+                        <Text>{plan.name}</Text>
+                      </View>
+                      <View style={styles.leftmostinnerview}>
+                        <Text note>{plan.difficulty}</Text>
+                      </View>
+                  </View>
+                  <View style={styles.rightinnerview}>
+                      
+                    <View style={styles.mostinnerview}>
+                      <Text note>
+                        Rs {plan.price_of_product} 
+                      </Text>
+                    </View>
+                      
+                    <View style={styles.mostinnerview}>
+                      <TouchableOpacity onPress={() => this.onButtonPress(plan.id)}>
+                        <EvilIcons name="like" size={30} color="#000000" />
+                      </TouchableOpacity>
+                      <Text note> 
+                        {plan.likes}
+                      </Text>
+                    </View>
+                  </View>
+              </View>
             </ListItem>
           }>
           </List>
@@ -163,4 +190,25 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  view: {
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
+    rightinnerview: {
+        flexDirection: "column",
+        justifyContent: "flex-end"
+    },
+    leftinnerview: {
+      paddingLeft:8,
+      flexDirection: "column",
+    },
+    mostinnerview: {
+        flexDirection: "row",
+        justifyContent: "flex-end"
+    },
+    leftmostinnerview: {
+        flexDirection: "row",
+        justifyContent: "flex-start"
+    },
 });
