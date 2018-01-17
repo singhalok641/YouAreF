@@ -33,61 +33,52 @@ export default class SignUpScreen extends Component {
 
   onButtonPress() {
 
-  const resetActionApprove = NavigationActions.reset({
-      index: 0,
-      actions: [
-        NavigationActions.navigate({ routeName: 'approveScreen'})
-      ]
-    });
+    const resetActionApprove = NavigationActions.reset({
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'approveScreen'})
+        ]
+      });
 
-  handleNameChange = (event) => {
-    this.setState({ name: event.target.value });
-  };
-  
-  fetch('http://api.youaref.biz/signup', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      google_id: this.props.navigation.state.params.id,
-      user_name: this.props.navigation.state.params.name,
-      college: this.state.college,
-      gender: this.state.gender,
-      email: this.props.navigation.state.params.email,
-      phone: this.state.contact,
-      address: this.state.address,
-      degree: this.state.degree,
-      cv: this.state.cv,
+    handleNameChange = (event) => {
+      this.setState({ name: event.target.value });
+    };
+    
+    fetch('http://api.youaref.biz/signup', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        google_id: this.props.navigation.state.params.id,
+        user_name: this.props.navigation.state.params.name,
+        college: this.state.college,
+        gender: this.state.gender,
+        email: this.props.navigation.state.params.email,
+        phone: this.state.contact,
+        address: this.state.address,
+        degree: this.state.degree,
+        cv: this.state.cv,
+      })
     })
-  })
-  .then((response) => response.json())
-  .then((responseJson) => {
-      this.setState({
-        auth: responseJson
-       }, function() {
-        console.log(this.state.auth);
-      AsyncStorage.setItem("token",this.state.auth.token);
-      this.props.navigation.dispatch(resetActionApprove);
+    .then((response) => response.json())
+    .then((responseJson) => {
+        this.setState({
+          auth: responseJson
+         }, function() {
+          console.log(this.state.auth);
+        AsyncStorage.setItem("token",this.state.auth.token);
+        this.props.navigation.dispatch(resetActionApprove);
+      });
     });
-  });
-  //console.log(this.props.navigation.state.params.id);
+    //console.log(this.props.navigation.state.params.id);
    
   }
 
   render() {
     const isEnabled = (this.state.college.length>0
       && this.state.address.length>0 && this.state.degree.length>0 && this.state.cv.length && this.state.contact.length);
-
-    console.log(this.state.college.length>0);
-    console.log(this.state.address.length>0);
-    console.log(this.state.degree.length>0);
-    console.log(this.state.cv.length>0);
-    console.log(this.state.contact.length>0);
-    console.log("hey");
-    console.log(true && true && true && true && true);
-    console.log(isEnabled);
     const { navigate } = this.props.navigation;
     const { params } = this.props.navigation.state;
 
