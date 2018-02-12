@@ -97,7 +97,7 @@ export default class PlanTabAbout extends Component {
               <Body>
                 <View>
                   <Text>Price of the product</Text>
-                  <Text note>{this.state.About.price_per_product}</Text>
+                  <Text note>{this.state.About.price_of_product}</Text>
                 </View>
               </Body>
             </ListItem>

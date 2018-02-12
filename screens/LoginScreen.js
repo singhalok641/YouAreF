@@ -115,7 +115,7 @@ export default class LoginScreen extends React.Component {
         this.setState({
           auth: responseJson
         }, function() {
-          console.log(this.state.auth);
+          //console.log(this.state.auth);
           if(this.state.auth.registered === true){
             AsyncStorage.setItem("token",this.state.auth.token);
             if(this.state.auth.status === "accepted") {

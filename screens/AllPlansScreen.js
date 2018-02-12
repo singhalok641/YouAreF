@@ -111,7 +111,7 @@ export default class AllPlansScreen extends Component {
                 } 
             dataArray={this.state.plans}
             renderRow={(plan) =>
-            <ListItem onPress={() => navigate('PlansScreen', { id: `${plan.id}`, name: `${plan.name}`})}>
+            <ListItem onPress={() => navigate('PlansScreen', { id: `${plan.id}`, name: `${plan.name}`, company_id: `${plan.company_id}`})}>
               <Image style={styles.thumbnailStyle} source={{ uri: plan.logo }} />
               <Body>
                 <View style={styles.viewTextStyle}>

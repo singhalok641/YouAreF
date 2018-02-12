@@ -10,7 +10,6 @@ import {
   TouchableHighlight,
   AsyncStorage,
   ActivityIndicator } from 'react-native';
-
 import { 
   Container, 
   Header, 
@@ -30,7 +29,6 @@ import {
   Thumbnail,
   Fab,
   Badge } from 'native-base';
-
 import { Font } from 'expo';
 import { WebBrowser } from 'expo';
 import { MonoText } from '../components/StyledText';
@@ -101,7 +99,7 @@ export default class HomeScreen extends React.Component {
           myplans: responseJson.data,
           
         }, function() {
-         console.log(this.state.myplans);
+         //console.log(this.state.myplans);
         });
       })
       .catch((error) => {
@@ -187,13 +185,13 @@ export default class HomeScreen extends React.Component {
               this.state.myplans.length > 0 ? (
                 <List dataArray={this.state.myplans}
                 renderRow={(myplans) =>
-                  <ListItem onPress={() => navigate('PlansScreen', { id: `${myplans.plan_id}`, name: `${myplans.name}`})}>
+                  <ListItem onPress={() => navigate('PlansScreen', { id: `${myplans.plan_id}`, name: `${myplans.name}`, company_id: `${myplans.company_id}`})}>
                     <Image style={styles.thumbnailStyle} source={{ uri: myplans.logo }} />
                     <Body>
                       <View style={styles.viewTextStyle}>
                         <Text>{myplans.name}</Text>
                         {
-                          myplans.status == 'accepted' ? (
+                          myplans.status == 'Accepted' ? (
                             <Badge style={{ backgroundColor: '#388e3c' }}>
                               <Text style={{ color: 'white' }}>{myplans.status}</Text>
                             </Badge>

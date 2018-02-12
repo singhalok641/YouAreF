@@ -89,7 +89,7 @@ export default class SplashScreen extends Component {
 
     try {
       let token = await AsyncStorage.getItem('token');
-      console.log(token);
+      //console.log(token);
       if(token!== null) {
       fetch('http://api.youaref.biz/checkstatus',{
         method: 'GET',

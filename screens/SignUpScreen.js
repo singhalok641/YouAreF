@@ -67,7 +67,7 @@ export default class SignUpScreen extends Component {
         this.setState({
           auth: responseJson
          }, function() {
-          console.log(this.state.auth);
+          //console.log(this.state.auth);
         AsyncStorage.setItem("token",this.state.auth.token);
         this.props.navigation.dispatch(resetActionApprove);
       });

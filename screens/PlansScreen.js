@@ -24,12 +24,36 @@ export default class PlansScreen extends Component {
     this.state = {
       isLoading: true,
       res:{},
-      flag:{}
+      flag:{},
+      registered: false,
+      test:{}
     }
   }
 
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
+
+    fetch(`http://api.youaref.biz/registerPlan/${this.props.navigation.state.params.id}/${this.props.navigation.state.params.company_id}`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token,
+        'Host': 'api.youaref.biz'
+      },
+
+    })
+    .then((response) => response.json())
+    .then((responseJson) => {
+        this.setState({
+          test: responseJson
+         }, function() {
+            console.log(this.state.test);
+            if(this.state.test.title === "Already registered!"){
+              this.setRegistered();
+            }
+      });
+    }); 
     
     fetch(`http://api.youaref.biz/plan/${this.props.navigation.state.params.id}`,{
        method: 'GET',
@@ -47,6 +71,7 @@ export default class PlansScreen extends Component {
           res: responseJson.data,
           
         }, function() {
+          //console.log(this.state.res);
         });
       })
       .catch((error) => {
@@ -54,37 +79,38 @@ export default class PlansScreen extends Component {
       });
   }
 
+  setRegistered(){
+    this.setState({
+      registered:true
+    });
+    console.log("set");
+  }
+
   onButtonPress= async () => {
   
-  let token = await AsyncStorage.getItem('token');
-    //console.log('Abc'+this.state.res.id);
-    //console.log(this.state.res.company_id);
-    
-  fetch(`http://api.youaref.biz/registerPlan/${this.state.res.id}/${this.state.res.company_id}`, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token,
-      'Host': 'api.youaref.biz'
-    },
+    let token = await AsyncStorage.getItem('token');
+      //console.log('Abc'+this.state.res.id);
+      //console.log(this.state.res.company_id);
+      
+    fetch(`http://api.youaref.biz/registerPlan/${this.state.res.id}/${this.state.res.company_id}`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + token,
+        'Host': 'api.youaref.biz'
+      },
 
-  })
-  .then((response) => response.json())
-  .then((responseJson) => {
-      this.setState({
-        flag: responseJson
-       }, function() {
-        if(this.state.flag.status === "ok"){
-          this.optionYes();
-        }
-        else if(this.state.flag.title === "Already registered!"){
-          this.optionNo();
-          alert('Already registered!');
-        }
-        
-    });
-  }); 
+    })
+    .then((response) => response.json())
+    .then((responseJson) => {
+        this.setState({
+          flag: responseJson
+         }, function() {
+            console.log(this.state.flag);
+            this.optionYes();
+      });
+    }); 
   }
 
   state = {}
@@ -105,9 +131,14 @@ export default class PlansScreen extends Component {
     }
     optionYes() {
         this.openConfirm(false);
+        if(this.state.flag.status === "ok"){
+          setTimeout(() => alert("Done"), 100);
+        }
+        else if(this.state.flag.title === "Already registered!"){
+          setTimeout(() => alert("Already registered!"), 100);
+        }
         // Yes, this is a workaround :(
         // Why? See this https://github.com/facebook/react-native/issues/10471
-        setTimeout(() => alert("Done"), 100);
     }
     optionNo() {
         this.openConfirm(false);
@@ -147,17 +178,19 @@ export default class PlansScreen extends Component {
           </Tab>
         </Tabs>
 
-        <Footer style={{ backgroundColor:'#000000'}}>
           <Button 
-            large
+            disabled={this.state.registered}
             title="REGISTER"
+            raised
+            large
+            containerViewStyle={{ marginTop:20, marginLeft:0, marginRight:0 }}
+            buttonStyle={{ backgroundColor: '#000000'}}
+            textStyle={{textAlign: 'center'}}
+            fontWeight={'bold'}
             color='white'
-            backgroundColor='black'
-            fontWeight='bold'
             fontSize={20}
             onPress={() => this.openConfirm(true)} 
-            />
-        </Footer>
+          />
 
         <ConfirmDialog
           title="Confirm Dialog"
