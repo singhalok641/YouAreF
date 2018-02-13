@@ -33,8 +33,8 @@ export default class PlansScreen extends Component {
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
 
-    fetch(`http://api.youaref.biz/registerPlan/${this.props.navigation.state.params.id}/${this.props.navigation.state.params.company_id}`, {
-      method: 'POST',
+    fetch(`http://api.youaref.biz/checkregisterPlan/${this.props.navigation.state.params.id}/${this.props.navigation.state.params.company_id}`, {
+      method: 'GET',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -50,7 +50,11 @@ export default class PlansScreen extends Component {
          }, function() {
             console.log(this.state.test);
             if(this.state.test.title === "Already registered!"){
-              this.setRegistered();
+              //this.setRegistered();
+              this.setState({
+                registered:true
+              });
+              console.log("set");
             }
       });
     }); 
@@ -80,17 +84,11 @@ export default class PlansScreen extends Component {
   }
 
   setRegistered(){
-    this.setState({
-      registered:true
-    });
-    console.log("set");
+    
   }
 
   onButtonPress= async () => {
-  
     let token = await AsyncStorage.getItem('token');
-      //console.log('Abc'+this.state.res.id);
-      //console.log(this.state.res.company_id);
       
     fetch(`http://api.youaref.biz/registerPlan/${this.state.res.id}/${this.state.res.company_id}`, {
       method: 'POST',
@@ -133,6 +131,9 @@ export default class PlansScreen extends Component {
         this.openConfirm(false);
         if(this.state.flag.status === "ok"){
           setTimeout(() => alert("Done"), 100);
+          this.setState({
+            registered:true
+          });
         }
         else if(this.state.flag.title === "Already registered!"){
           setTimeout(() => alert("Already registered!"), 100);

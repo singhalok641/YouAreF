@@ -58,7 +58,7 @@ export default class HomeScreen extends React.Component {
 
   componentDidMount = async () => {
     let token = await AsyncStorage.getItem('token');
-    
+    console.log(token);
     fetch('http://api.youaref.biz/home',{
         method: 'GET',
         headers: {
