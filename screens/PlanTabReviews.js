@@ -167,7 +167,7 @@ export default class PlanTabReviews extends Component {
                       <Text>{review.name}</Text>
                       <Text note>{review.message}</Text>
                       <View style={styles.nameTextStyle}>
-                        <Text note>By {review.user_name} on {review.date}</Text>
+                        <Text note>By {review.user_name}</Text>
                       </View>
                     </View>
                   </Body>

@@ -1,17 +1,17 @@
 Arguments: 
-  /Users/ayush/.nvm/versions/node/v4.6.1/bin/node /Users/ayush/.nvm/versions/node/v4.6.1/bin/yarn
+  /usr/bin/node /usr/share/yarn/bin/yarn.js
 
 PATH: 
-  /Users/ayush/.nvm/versions/node/v4.6.1/bin:/usr/local/bin:/usr/local/opt/qt/bin:/opt/local/bin:/opt/local/sbin:/Users/ayush/.jenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Wireshark.app/Contents/MacOS
+  /home/anshul/bin:/home/anshul/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.3.2
 
 Node version: 
-  4.6.1
+  8.9.4
 
 Platform: 
-  darwin x64
+  linux x64
 
 npm manifest: 
   {
@@ -41,6 +41,7 @@ npm manifest:
       "react-native-elements": "^0.19.0",
       "react-native-hyperlink": "0.0.12",
       "react-native-icon-badge": "^1.1.3",
+      "react-native-modal": "^5.0.0",
       "react-native-phone-call": "^1.0.4",
       "react-native-popup-dialog": "^0.10.46",
       "react-native-simple-dialogs": "^0.3.1",
@@ -1639,7 +1640,13 @@ Lockfile:
       os-name "^2.0.1"
       which "^1.2.14"
   
-  "errno@>=0.1.1 <0.2.0-0", errno@^0.1.4:
+  "errno@>=0.1.1 <0.2.0-0":
+    version "0.1.6"
+    resolved "https://registry.yarnpkg.com/errno/-/errno-0.1.6.tgz#c386ce8a6283f14fc09563b71560908c9bf53026"
+    dependencies:
+      prr "~1.0.1"
+  
+  errno@^0.1.4:
     version "0.1.4"
     resolved "https://registry.yarnpkg.com/errno/-/errno-0.1.4.tgz#b896e23a9e5e8ba33871fc996abd3635fc9a1c7d"
     dependencies:
@@ -3084,8 +3091,8 @@ Lockfile:
       js-tokens "^3.0.0"
   
   lottie-ios@^2.0.5:
-    version "2.1.3"
-    resolved "https://registry.yarnpkg.com/lottie-ios/-/lottie-ios-2.1.3.tgz#57b2328511a26606dc6de7a74bbdbf77f92c6aa0"
+    version "2.1.5"
+    resolved "https://registry.yarnpkg.com/lottie-ios/-/lottie-ios-2.1.5.tgz#33be2a74fbf2614a6b6f302506dc21c1090c585a"
   
   lottie-react-native@2.2.0:
     version "2.2.0"
@@ -3762,7 +3769,7 @@ Lockfile:
     dependencies:
       asap "~2.0.3"
   
-  prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0:
+  prop-types@15.6.0, prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0:
     version "15.6.0"
     resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
     dependencies:
@@ -3773,6 +3780,10 @@ Lockfile:
   prr@~0.0.0:
     version "0.0.0"
     resolved "https://registry.yarnpkg.com/prr/-/prr-0.0.0.tgz#1a84b85908325501411853d0081ee3fa86e2926a"
+  
+  prr@~1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
   
   pseudomap@^1.0.2:
     version "1.0.2"
@@ -3860,6 +3871,12 @@ Lockfile:
     dependencies:
       prop-types "^15.5.10"
   
+  react-native-animatable@^1.2.4:
+    version "1.2.4"
+    resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.2.4.tgz#b5fb7657e8f6edadbc26697057a327fb920b3039"
+    dependencies:
+      prop-types "^15.5.10"
+  
   react-native-app-intro@^1.1.5:
     version "1.1.5"
     resolved "https://registry.yarnpkg.com/react-native-app-intro/-/react-native-app-intro-1.1.5.tgz#34a2d2265b2d654d31bae743c404856c37448692"
@@ -3893,9 +3910,9 @@ Lockfile:
     dependencies:
       react-native-dismiss-keyboard "1.0.0"
   
-  "react-native-drawer@git+https://github.com/GeekyAnts/react-native-drawer.git":
+  "react-native-drawer@https://github.com/GeekyAnts/react-native-drawer":
     version "2.3.0"
-    resolved "git+https://github.com/GeekyAnts/react-native-drawer.git#8d9078516d177c9cb02d2579a6860706d2370d25"
+    resolved "https://github.com/GeekyAnts/react-native-drawer#8d9078516d177c9cb02d2579a6860706d2370d25"
     dependencies:
       prop-types "^15.5.8"
       tween-functions "^1.0.1"
@@ -3931,9 +3948,9 @@ Lockfile:
     version "1.1.3"
     resolved "https://registry.yarnpkg.com/react-native-icon-badge/-/react-native-icon-badge-1.1.3.tgz#43de0c923afe4968dfcff127ec5c57057b16f787"
   
-  "react-native-keyboard-aware-scroll-view@git+https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view.git":
+  "react-native-keyboard-aware-scroll-view@https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view":
     version "0.2.9"
-    resolved "git+https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view.git#f4805f254d6cc8e3329f5fb224944401f66655db"
+    resolved "https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view#f4805f254d6cc8e3329f5fb224944401f66655db"
     dependencies:
       create-react-class "^15.6.0"
       prop-types "^15.5.10"
@@ -3942,6 +3959,13 @@ Lockfile:
   react-native-maps@0.15.3:
     version "0.15.3"
     resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.15.3.tgz#5d9e0a8e30ecc51dc755b7a3b9d6b6ed5e2dd08c"
+  
+  react-native-modal@^5.0.0:
+    version "5.0.0"
+    resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-5.0.0.tgz#d9a056e68a985678d9545fce38dcc1ac3299ba31"
+    dependencies:
+      prop-types "15.6.0"
+      react-native-animatable "^1.2.4"
   
   react-native-phone-call@^1.0.4:
     version "1.0.4"
@@ -5253,5 +5277,5 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz: EISDIR: illegal operation on a directory, open '/Users/ayush/Library/Caches/Yarn/v1/npm-react-native-0.48.4-a26ae48f77a0ac91acd19b1bb60d63737075f3ef/'
-      at Error (native)
+  Error: https://github.com/expo/react-native/archive/sdk-21.0.2.tar.gz: unexpected end of file
+      at Gunzip.zlibOnError (zlib.js:153:15)
