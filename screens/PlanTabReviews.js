@@ -120,12 +120,10 @@ export default class PlanTabReviews extends Component {
           visibleModal: null,
          }, function() {
           if(this.state.res.status === "ok"){
-            this.refs.titleInput.setNativeProps({text:''});
-            this.refs.descriptionInput.setNativeProps({text:''});
-            alert("Submitted :)");
+            setTimeout( () => {
+              alert("Submitted");
+            }, 500);
           }
-
-          
       });
     }); 
   }
@@ -210,7 +208,6 @@ export default class PlanTabReviews extends Component {
             backdropOpacity={0.5} 
             onBackButtonPress={() => this.setState({ visibleModal: null })}
             onBackdropPress={() => this.setState({ visibleModal: null })}
-            animationOut={ 'slideOutRight' }
             >
             {this._renderModalContent()}
           </Modal>

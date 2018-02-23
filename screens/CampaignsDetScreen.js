@@ -276,6 +276,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
+    paddingLeft:20,
+    paddingRight:20,
   },
   aboutTextStyle: {
     textAlign: 'justify',

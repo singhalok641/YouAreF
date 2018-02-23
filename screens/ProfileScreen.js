@@ -72,6 +72,9 @@ export default class ProfileScreen extends Component {
           />*/}
           <List>
             <ListItem>
+              <Text>User ID - {this.state.user.id}</Text>
+            </ListItem>
+            <ListItem>
               <Text>{this.state.user.user_name}</Text>
             </ListItem>
             <ListItem>
