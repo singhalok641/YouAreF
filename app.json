@@ -4,8 +4,8 @@
     "description": "No description",
     "slug": "my-new-project",
     "privacy": "public",
-    "sdkVersion": "21.0.0",
-    "version": "2.0.1",
+    "sdkVersion": "22.0.0",
+    "version": "2.1.0",
     "orientation": "portrait",
     "primaryColor": "#cccccc",
     "icon": "./assets/icons/icon.png",
@@ -20,7 +20,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.youaref.client",
-      "buildNumber": "1.0.8",
+      "buildNumber": "1.1.0",
       "config":{
         "googleSignIn":{
           "reservedClientId":"com.googleusercontent.apps.612669964630-79dju4toak9f4svrbp8n8f0ns27o1ldq"
@@ -29,7 +29,7 @@
     },
     "android": {
       "package": "com.youaref.client",
-      "versionCode": 10,
+      "versionCode": 11,
       "config": {
         "googleSignIn": {
           "apiKey": "AIzaSyBHzyuKFyzQPdVsg126zD4u_x4lIHIe34o",

@@ -40,6 +40,13 @@ export default class SignUpScreen extends Component {
         ]
       });
 
+    const resetActionLogin = NavigationActions.reset({
+      index: 0,
+      actions: [
+        NavigationActions.navigate({ routeName: 'Login'})
+      ]
+    });
+
     handleNameChange = (event) => {
       this.setState({ name: event.target.value });
     };
@@ -68,11 +75,24 @@ export default class SignUpScreen extends Component {
           auth: responseJson
          }, function() {
           //console.log(this.state.auth);
-        AsyncStorage.setItem("token",this.state.auth.token);
-        this.props.navigation.dispatch(resetActionApprove);
+        if(this.state.auth.status === 'ok'){
+          AsyncStorage.setItem("token",this.state.auth.token);
+          this.props.navigation.dispatch(resetActionApprove);  
+        }
+        else if(this.state.auth.status === 500){
+          //() => console.log(this.props.navigation.state.params.id);
+          //console.log("here");
+          alert("Email or Phone number already exists.");
+         this.props.navigation.dispatch(resetActionLogin); 
+        }
+        else{
+         alert("Sorry, try again.");
+         this.props.navigation.dispatch(resetActionLogin); 
+        }  
+        
       });
     });
-    //console.log(this.props.navigation.state.params.id);
+    console.log(this.props.navigation.state.params.id);
    
   }
 
@@ -111,12 +131,6 @@ export default class SignUpScreen extends Component {
               value={this.state.contact}
               maxLength = {10}
             />
-            {/*<TextInput
-              style={{height: 50}}
-              placeholder="Gender"
-              onChangeText={(gender) => this.setState({gender})}
-              value={this.state.gender}
-            />*/}
             <View style={{ flex:1,flexDirection:'row',paddingTop: 12}}>
               <Text>Gender: </Text>
               <RadioForm formHorizontal={true} animation={true} >

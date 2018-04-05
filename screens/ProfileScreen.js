@@ -3,6 +3,7 @@ import { Container, Header, Content, List, ListItem, Thumbnail, Text, Body, Sepa
 import { ScrollView, StyleSheet, View, Image, AsyncStorage, ActivityIndicator } from 'react-native';
 import { Button } from 'react-native-elements';
 import Hyperlink from 'react-native-hyperlink';
+import { NavigationActions } from 'react-navigation';
 
 export default class ProfileScreen extends Component {
   
@@ -47,7 +48,14 @@ export default class ProfileScreen extends Component {
   }
 
   logoutbutton = async () => {
-  this.props.navigation.navigate('Login');  
+  const resetActionLogin = NavigationActions.reset({
+      index: 0,
+      actions: [
+        NavigationActions.navigate({ routeName: 'Login'})
+      ]
+    });
+      
+  this.props.navigation.dispatch(resetActionLogin);  
   AsyncStorage.clear();
   }
 
